@@ -71,6 +71,15 @@
             <optional>true</optional>
         </dependency>
 	</dependencies>
+	
+	<distributionManagement>
+  
+  <repository>
+    <id>github</id>
+    <name>NoticeBoard Simple CRUD application</name>
+    <url>https://maven.pkg.github.com/yamenosta/MyProject</url> 
+  </repository>
+</distributionManagement>
 
 	<build>
 		<plugins>
