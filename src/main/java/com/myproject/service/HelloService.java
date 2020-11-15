@@ -1,4 +1,4 @@
-package com.gitaction.service;
+package com.myproject.service;
 
 public interface HelloService {
 	

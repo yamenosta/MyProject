@@ -1,10 +1,10 @@
-package com.gitaction.controller;
+package com.myproject.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gitaction.service.HelloService;
+import com.myproject.service.HelloService;
 
 @RestController
 public class HelloController {
@@ -15,7 +15,7 @@ public class HelloController {
 	
 	  @GetMapping("/")
 	    public String hello() {
-		  // test ggg
+		  // test ggg hh
 	       return  helloService.get();
 	    }
 

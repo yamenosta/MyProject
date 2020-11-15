@@ -1,4 +1,4 @@
-package com.gitaction.repository;
+package com.myproject.repository;
 
 public interface HelloRepository {
 	

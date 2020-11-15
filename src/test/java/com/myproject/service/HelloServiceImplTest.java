@@ -1,4 +1,4 @@
-package com.gitaction.service;
+package com.myproject.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +10,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.gitaction.repository.HelloRepository;
+import com.myproject.repository.HelloRepository;
+import com.myproject.service.HelloService;
+import com.myproject.service.HelloServiceImpl;
 
 
 @ExtendWith(MockitoExtension.class)
