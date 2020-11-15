@@ -8,10 +8,10 @@
 		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.gitaction</groupId>
-	<artifactId>GitAction</artifactId>
+	<groupId>com.myproject</groupId>
+	<artifactId>MyProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GitAction</name>
+	<name>MyProject</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

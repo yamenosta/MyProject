@@ -1,9 +1,9 @@
-package com.gitaction.service;
+package com.myproject.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gitaction.repository.HelloRepository;
+import com.myproject.repository.HelloRepository;
 
 @Service
 public class HelloServiceImpl implements HelloService {
