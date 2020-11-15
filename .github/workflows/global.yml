@@ -58,6 +58,5 @@ jobs:
       - name: Build Docker image
         run: docker build -t $REPO:latest -t $REPO:${GITHUB_SHA::8} .
       - name: Publish Docker image
-        run:  docker logout -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
-              docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
-              docker push $REPO
+        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+             docker push $REPO
