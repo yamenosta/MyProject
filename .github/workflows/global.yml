@@ -57,6 +57,6 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
       - name: Build Docker image
-        run: docker build -t $REPO:${{ secrets.DOCKER_USER }}/latest -t $REPO:${{ secrets.DOCKER_USER }}/${GITHUB_SHA::8} .
+        run: docker build -t $REPO:ostayamen/latest -t $REPO:ostayamen/${GITHUB_SHA::8} .
       - name: Publish Docker image
         run: docker push $REPO
