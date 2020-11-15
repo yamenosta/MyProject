@@ -43,7 +43,6 @@ jobs:
   docker:
     name: Publish - Docker Hub
     runs-on: ubuntu-18.04
-    needs: [artifact]
     env:
       REPO: ${{ secrets.DOCKER_REPO }}
 
@@ -58,5 +57,6 @@ jobs:
       - name: Build Docker image
         run: docker build -t $REPO:latest -t $REPO:${GITHUB_SHA::8} .
       - name: Publish Docker image
-        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+        run: docker logout 
+             docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
              docker push $REPO
