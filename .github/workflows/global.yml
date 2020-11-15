@@ -37,7 +37,7 @@ jobs:
       - name: Publish artifact on GitHub Packages
         run: mvn -B clean deploy -DskipTests
         env:
-          GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   docker:
@@ -54,7 +54,7 @@ jobs:
         with:
           java-version: 11.0.4
       - name: Login to Docker Hub
-        run: docker login -u ${{ secrets.DOCKERUSER }} -p ${{ secrets.DOCKERPASS }}
+        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
       - name: Build Docker image
         run: docker build -t $REPO:latest -t $REPO:${GITHUB_SHA::8} .
       - name: Publish Docker image
